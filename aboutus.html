@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Roboto', sans-serif;
+				box-sizing: border-box;
+			}
+
+			main {
+				width: 100vw;
+				max-width: 100%;
+				height: max-content;
+			}
+			section {
+				width: 100%;
+			}
+			.superhead {
+				margin: auto;
+       position: relative;
+				width: 100%;
+				height: clamp(20vh, 300px, 350px);
+				display: flex;
+
+				background-color: black;
+				display: flex;
+				align-items: flex-end;
+			}
+			.superhead div {
+				height: max-content;
+				width: max-content;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				word-wrap: break-word;
+			}
+			.superhead div h1 {
+				font-size: 4rem;
+				line-height: 4rem;
+				color: white;
+				filter: hue-rotate(360deg);
+				margin: 2vw 0 5vh 5vw;
+			}
+			.padding {
+				padding: 3vh 5vw 3vh 5vw;
+			}
+			.detailes {
+				width: clamp(250px, 100vw, 800px);
+				max-width: 100%;
+				height: max-content;
+				margin: 1vh 0 10vh 0;
+
+				transition: margin 1s;
+			}
+
+			.detailes h1 {
+				margin-bottom: 5vh;
+			}
+			.detailes p {
+				text-align: justify;
+			}
+			.right-detailes {
+				width: clamp(250px, 100vw, 800px);
+				height: max-content;
+				margin: 1vh 0 10vh 0;
+				margin-left: calc(100% - clamp(250px, 100vw, 800px));
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				text-align: right;
+				transition: margin 1s;
+			}
+			.right-detailes h1 {
+				margin-bottom: 5vh;
+			}
+			.right-detailes p {
+				text-align: justify;
+			}
+			.contact {
+				width: clamp(250px, 100%, 1000px);
+				height: clamp(20vh, 250px, 300px);
+				margin: auto;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: space-evenly;
+				box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.12);
+				margin-bottom: 5vh;
+			}
+			.contact:hover .container svg {
+				fill: blue;
+			}
+			#container {
+				width: 100px;
+				position: relative;
+				height: 100px;
+			}
+			.contact div a {
+				color: white;
+				text-decoration: none;
+				padding: 10px 15px;
+				border-radius: 5px;
+				background-color: hsl(180, 50%, 50%);
+			}
+			.contact div a:hover {
+				background-color: hsl(180, 50%, 40%);
+				color: black;
+			}
+			.final {
+				width: 100%;
+				height: clamp(100px, 15vh, 350px);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: black;
+				margin-top: 100px;
+			}
+			.final h1 {
+				font-size: 1rem;
+				color: white;
+			}
+		</style>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	</head>
+
+	<body>
+		<main>
+			<section>
+				<div class="superhead">
+					<lottie-player
+						src="https://assets5.lottiefiles.com/packages/lf20_NSIVKV.json"
+						background="transparent"
+						speed="1"
+						style="
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+						"
+						loop
+						autoplay
+					></lottie-player>
+					<div>
+						<h1>About Us</h1>
+					</div>
+				</div>
+				<!- -->
+				<div class="padding detailes">
+					<h1 class="neer head">Dependable & Affordable</h1>
+					<p>
+						Are you looking for dependable, affordable transportation in the
+						Addis Ababa area? Do you want an on-demand taxi service that values
+						you as a customer and offers an innovative mobile app for all of
+						your transportation booking needs? Choose ZayRide today and see what
+						our experience and professionalism can do for you. Our on-demand
+						taxi service connects riders and taxi drivers quickly and
+						conveniently through an innovative mobile app that can be downloaded
+						on iOS and Android smartphones. No more waiting in line and no more
+						guessing how much you will pay; ZayRide makes booking a taxi is
+						easier than ever!
+					</p>
+				</div>
+				<div class="padding right-detailes">
+					<h1 class="neer head">Why Choose ZayRide?</h1>
+					<p>
+						ZayRide is cheaper, safer and easier to use than any other
+						transportation service in the area. Our easy to use taxi service app
+						is free to download and gives our customers a modern, convenient way
+						to get from one place to another. And with its built-in meter that
+						counts per distance and time, our customers know how much they will
+						pay before they arrive. With ZayRide, technology meets
+						transportation; book your ride today! Thousands of satisfied ZayRide
+						customers can’t be wrong; we are Addis Ababa’s number one source for
+						quality transportation, affordable prices and knowledgeable service.
+						Ride with us today and let our experienced team make you a ZayRide
+						customer for life.
+					</p>
+				</div>
+				<div class="padding detailes">
+					<h1 class="neer head">Get Social with Us</h1>
+					<p>
+						To learn more about ZayRide and how our mobile app will save you
+						time and money, contact us today and let one of our representatives
+						assist you and answer any questions you might have. Be sure to
+						follow us on Facebook to become a part of the ZayRide online
+						community.
+					</p>
+				</div>
+				<div class="padding right-detailes">
+					<h1 class="neer head">The ZayRide Mission</h1>
+					<p>
+						Headquartered in Addis Ababa, ZayRide is a customer centric
+						on-demand taxi service offering fast, convenient service throughout
+						the local area. With ZayRide, you get fully licensed, experienced
+						drivers who have had a thorough background check to ensure the
+						safety of our passengers. Our taxis are clean, comfortable and well
+						maintained and will make you feel like you are in your own car. From
+						your doorstep, to your destination, ZayRide is there for you.
+					</p>
+				</div>
+				<div class="contact">
+					<div><h1>Contact Us</h1></div>
+					<div id="container">
+						<lottie-player
+							src="https://assets7.lottiefiles.com/packages/lf20_Vx5c3M/13_phone.json"
+							background="transparent"
+							speed="1"
+							style="width: 100%; height: 100%"
+							loop
+							autoplay
+						></lottie-player>
+					</div>
+					<div><a href="tel:+251-116-721-052 ">+251 116 721 052 </a></div>
+				</div>
+				<div class="contact">
+					<div><h1>Address</h1></div>
+					<div id="container">
+						<lottie-player
+							src="https://assets6.lottiefiles.com/packages/lf20_CEyvj2.json"
+							background="transparent"
+							speed="1"
+							style="width: 100%; height: 100%"
+							loop
+							autoplay
+						></lottie-player>
+					</div>
+					<div>
+						<a
+							href="https://www.google.com/maps/dir//Mafi+City+Mall,+Cameroon+Street,+Bole,+Addis+Ababa,+Ethiopia/@8.9964121,38.7526141,13z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x164b8502e91bb46b:0xcdde263b63bc2dcd!2m2!1d38.7876338!2d8.9964138!3e2"
+							>Bole Mafi Mall #602, Addis Ababa Bole, AddisAbaba, Ethiopia.
+						</a>
+					</div>
+				</div>
+				<div class="contact">
+					<div><h1>Email</h1></div>
+					<div id="container">
+						<lottie-player
+							src="https://assets8.lottiefiles.com/packages/lf20_tDEN64.json"
+							mode="bounce"
+							background="transparent"
+							speed="0.5"
+							style="width: 100%; height: 100%"
+							loop
+							autoplay
+						></lottie-player>
+					</div>
+					<div>
+						<a href="mailto:info@zayride.com">info@zayride.com </a>
+					</div>
+				</div>
+				<div class="final">
+					<h1>© 2019 ZayTech IT SOLUTIONS</h1>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

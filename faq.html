@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>FAQ</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Roboto', sans-serif;
+			}
+			main {
+				width: 100vw;
+				max-width: 100%;
+				height: max-content;
+			}
+			.superhead {
+				margin: auto;
+				margin-top: min(50px, 5vh);
+				margin-bottom: min(50px, 5vh);
+				width: 100%;
+				height: max-content;
+				display: flex;
+				justify-content: center;
+			}
+			.superhead div {
+				height: max-content;
+				width: max-content;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				word-wrap: break-word;
+			}
+			.superhead div h1 {
+				font-size: 4rem;
+				line-height: 4rem;
+			}
+			/* velocity */
+
+			.velocity {
+				width: clamp(250px, 100vw, 900px);
+				height: clamp(100px, 10vh, 150px);
+				/* background-color: blue; */
+				margin: auto;
+				margin-top: 10vh;
+				margin-bottom: 10vh;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				position: relative;
+			}
+			.velocity-bar {
+				width: 100%;
+				height: clamp(70px, 70%, 150px);
+
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				z-index: 10;
+			}
+			.status {
+				font-size: clamp(1rem, 2vw, 2rem);
+				padding: 1% 3%;
+				/* background-color: red; */
+				border-radius: 1vw;
+			}
+			.ab-velocity {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				/* background-color: burlywood; */
+			}
+			.content-wrap {
+				width: 100%;
+				height: max-content;
+				margin: auto;
+				margin-top: 1vh;
+				/* background-color: blue; */
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.content-div {
+				width: clamp(250px, 90vw, 1000px);
+				height: max-content;
+				min-height: clamp(50px, 10vh, 100px);
+				margin-bottom: 2vh;
+				/* background-color: orange; */
+				position: relative;
+			}
+			.content-div::before {
+				content: '';
+				background-color: gray;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+			.content-div div {
+				display: flex;
+			}
+			.opensvg {
+				width: 10%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5rem;
+				font-weight: 900;
+			}
+			.opensvg:hover {
+				color: blue;
+				cursor: pointer;
+			}
+			.content-div div h1 {
+				width: 90%;
+				height: max-content;
+			}
+			.answer {
+				margin: 3vh 0;
+			}
+		</style>
+		<script>
+			function openAns(e) {
+				let display = e.children[1].style.display;
+				if (display === '') {
+					e.children[1].style.display = 'none';
+				}
+				if (display === 'none') {
+					e.children[1].style.display = 'block';
+				}
+				if (display === 'block') {
+					e.children[1].style.display = 'none';
+				}
+			}
+			function setOpen(e) {
+				console.log('loaded');
+				let ans = document.getElementsByClassName('answer');
+				let answer = Array.from(ans);
+				answer.map((a, i) => {
+					a.style.display = 'none';
+				});
+				if (display === '') {
+					e.children[1].style.display = 'none';
+				}
+			}
+		</script>
+	</head>
+	<body onload="setOpen(this)">
+		<main>
+			<section>
+				<div class="superhead">
+					<div>
+						<h1>FAQ</h1>
+					</div>
+				</div>
+				<!-- changing -->
+				<!-- <div class="velocity">
+					<div class="velocity-bar ab-velocity"></div>
+					<div class="velocity-bar">
+						<span class="status">ride</span>
+						<span class="status">Payment</span>
+						<span class="status">Refund</span>
+						<span class="status">cash</span>
+					</div>
+				</div> -->
+				<!-- div -->
+				<div class="content-wrap">
+					<div class="content-div" onclick="openAns(this)">
+						<div>
+							<h1>Q. How it works?</h1>
+							<span class="opensvg">&#65291;</span>
+						</div>
+						<div class="answer">
+							A : Login to the Ride application and select appropriate car type.
+							Enter the destination and send request to drivers.
+						</div>
+					</div>
+					<div class="content-div" onclick="openAns(this)">
+						<div>
+							<h1>Q. Do you provide Wifi?</h1>
+							<span class="opensvg">&#65291;</span>
+						</div>
+						<div class="answer">A : no .</div>
+					</div>
+					<div class="content-div" onclick="openAns(this)">
+						<div>
+							<h1>How to signup as a rider?</h1>
+							<span class="opensvg">&#65291;</span>
+						</div>
+						<div class="answer">
+							First of all download the ZayRide Passenger application from the
+							Appstore. After installing go to signup page and fillup required
+							details.
+						</div>
+					</div>
+					<div class="content-div" onclick="openAns(this)">
+						<div>
+							<h1>
+								Why do we use it?
+							</h1>
+							<span class="opensvg">&#65291;</span>
+						</div>
+						<div class="answer">
+							Ii is a long established fact that a reader will be distracted by
+							the readable content of a page when looking at its layout.
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
